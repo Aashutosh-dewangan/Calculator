@@ -9,6 +9,10 @@ arr.forEach(button => {
             string = eval(string);
             input.value = string;
         }
+        else if(e.target.innerHTML == 'ANS'){
+            string = eval(string);
+            input.value = string;
+        }
 
         else if(e.target.innerHTML == 'AC'){
             string = "";
@@ -18,10 +22,15 @@ arr.forEach(button => {
             string = string.substring(0, string.length-1);
             input.value = string;
         }
+        else if(e.target.innerHTML == '√'){
+            string =  Math.sqrt(string);
+            input.value = string;
+        }
         else{
             string += e.target.innerHTML;
             input.value = string;
         }
-
+    
+       
     })
 })
